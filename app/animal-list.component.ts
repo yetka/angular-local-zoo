@@ -4,21 +4,19 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template:`
-    <div class="list">
-      <h3>Choose the option below to see list:</h3>
-      <select (change)="onChange($event.target.value)">
-        <option value="allAnimals"> All Animals </option>
-        <option value="youngAnimals"> Young Animals </option>
-        <option value="matureAnimals" selected="selected"> Mature Animals </option>
-      </select>
-      <h2>List of Animals: </h2>
-      <h4>(Click button to edit it or to check the details)</h4>
-      <ul>
-        <li *ngFor="let currentAnimal of childAnimalList | completeness:filterByCompleteness">{{currentAnimal.name}}, {{currentAnimal.species}}
-          <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
-        </li>
-      </ul>
-    </div>
+    <label>Searching options</label>
+    <select (change)="onChange($event.target.value)">
+      <option value="allAnimals"> All Animals </option>
+      <option value="youngAnimals"> Young Animals </option>
+      <option value="matureAnimals" selected="selected"> Mature Animals </option>
+    </select>
+    <h1>List of Animals</h1>
+    <ul>
+      <li *ngFor="let currentAnimal of childAnimalList | completeness:filterByCompleteness">{{currentAnimal.name}}, {{currentAnimal.species}}
+        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+      </li>
+    </ul>
+
   `
 })
 

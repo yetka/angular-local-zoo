@@ -1,5 +1,107 @@
+body {
+  font-family: monospace;
+  padding: 15px;
+  margin: 15px;
+}
+
 .jumbotron {
   text-align: center;
   font-family: monospace;
-  font-size: 56px;
+  font-size: 76px;
+  background-color: black;
+  color: white;
+}
+
+#add-new-animal {
+  background-color: #8cd98c;
+  padding: 15px;
+  width: 500px;
+  text-align: center;
+}
+
+#add-new-animal button {
+  background-color: #40bf40;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#add-new-animal label {
+  width: 250px;
+  line-height: 2;
+  text-align: right;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.lists {
+  padding: 20px;
+  width: 550px;
+  background-color: #e6f5ff
+}
+
+.lists label {
+  font-weight: normal;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.lists h1 {
+  font-weight: bold;
+}
+
+.lists li {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.lists button {
+  background-color: #99d6ff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.details {
+  padding: 20px;
+  width: 550px;
+  background-color: #fae6ff;
+}
+
+.edit {
+  padding: 20px;
+  width: 550px;
+  background-color: #f0b3ff;
+  text-align: center;
+}
+
+.edit button {
+  background-color: #e066ff;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.edit label {
+  width: 300px;
+  line-height: 2;
+  text-align: right;
+  font-weight: normal;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+img {
+  width: 470px;
 }

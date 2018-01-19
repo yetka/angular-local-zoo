@@ -6,11 +6,21 @@ import { Animal } from './animal.model';
   template: `
     <div class="container">
       <h1 class="jumbotron">Local Zoo</h1>
-      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-      <hr>
-      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-      <hr>
-      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="lists">
+            <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+          </div>
+          <div>
+            <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+          </div>
+        </div>
+        <div class="col-md-6" id="add-new-animal">
+          <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+          <br>
+          <img src="resources/images/zoo.jpg" alt="zoo image">
+        </div>
+      </div>
     </div>
   `
 })
