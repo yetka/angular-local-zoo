@@ -8,6 +8,8 @@ import { Animal } from './animal.model';
       <h1 class="jumbotron">Local Zoo</h1>
       <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
       <hr>
+      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+      <hr>
     </div>
   `
 })
@@ -18,5 +20,15 @@ export class AppComponent {
     new Animal('Ocelot', 'Prince', 4, 'Carnivore', 'Tropical Rain Forest Building', 6, 'Male', 'Laying in the sunshine', 'Toys that are not rope-based'),
     new Animal('Northwest Black Tailed Deer', 'Tinkerbell', 8, 'Herbivore', 'Northern Trail', 2, 'Female', 'Delicate roots and leaves', 'Loud noises')
   ];
+
+  selectedAnimal = null;
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
 
 }

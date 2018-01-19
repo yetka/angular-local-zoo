@@ -9,7 +9,7 @@ import { Animal } from './animal.model';
       <h4>(Click button to edit it or to check the details)</h4>
       <ul>
         <li *ngFor="let currentAnimal of childAnimalList"> {{currentAnimal.name}}, {{currentAnimal.species}}
-          <button (click)="editButtonHasBeenClicked(currentAnimal)" type="btn-danger">Edit!</button>
+          <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
         </li>
       </ul>
     </div>
